@@ -12,6 +12,7 @@ N. Desmoulins, A. Diop, Y. Raffle, J. Traoré, and J. Gratesac, “Practical ano
 #### Re-enrollment:
 
 Can't keep track of long term credentials if we want to preserve privacy
+
 revoked TC go in mode "revoked" and thus can't run JOIN (or can JOIN but telling Issuer that TC got revoked)
 
 What to do with self revocation ? 
