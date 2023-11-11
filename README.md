@@ -1,5 +1,23 @@
 # thesis-v2x
 ## Progress:
+### Meeting 3:
+#### V2X implementations:
+
+Artery high-level : http://artery.v2x-research.eu/architecture/
+
+Artery is an extension of veins and is using Vanetza for the networking side. 
+
+Artery, like veins, has a big part of the simulation managing the traffic of vehicles on real road map (SUMO part) -> Do I need this or Vanetza alone is enough ?
+
+Advantages : 
+- More realistics simulations
+- Probably less coding needed as vehicules generation, nodes, etc already implemented (more an All-in-one solution)
+
+Disavantages : 
+- Probably more computing power needed for simulation (so fewer vehicles simulated)
+- More time needed to understand it
+- Traffic density, traffic jams, road architecture, etc are not really in the scope of the thesis for now
+
 ### Meeting 2:
 #### Enrollment:
 
@@ -11,17 +29,13 @@ N. Desmoulins, A. Diop, Y. Raffle, J. Traoré, and J. Gratesac, “Practical ano
 
 #### Re-enrollment:
 
-Can't keep track of long term credentials if we want to preserve privacy
+Can't keep track of long term credentials if we want to preserve privacy  
+revoked TC go in mode "revoked" and thus can't run JOIN (or can JOIN but telling Issuer that TC got revoked)  
 
-revoked TC go in mode "revoked" and thus can't run JOIN (or can JOIN but telling Issuer that TC got revoked)
-
-What to do with self revocation ? 
-
--> force TC to contact RA first if self revoked
-
-RA keep history of revoked pseudo that didnt reply (so got self revoked) OR keep all pseudo in history
-
-RA reply to TC by sending the list of pseudonyms revoked in the window where TC self revoked 
+What to do with self revocation ?  
+-> force TC to contact RA first if self revoked  
+RA keep history of revoked pseudo that didnt reply (so got self revoked) OR keep all pseudo in history  
+RA reply to TC by sending the list of pseudonyms revoked in the window where TC self revoked  
 
 Need to explore pseudonyms generation (Can a TC recognise his own pseudo without the need to keep them in memory? Seems like it can by computing pk_ps' = w^s (??))
 
